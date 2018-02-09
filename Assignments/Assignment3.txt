@@ -1,0 +1,20 @@
+Assignment #3 : Relational Data Model Components
+
+2.2.1
+
+a.) The attributes of each relation
+In the Accounts relation  : acctNo, type, balance
+In the Customers relation : firstName, lastName, idNo, account
+b.) The tuples of each relation
+In the Accounts relation  : (12345, savings, 12000), (23456, checking, 1000), (34567, savings, 25)
+In the Customers relation : (Robbie, Banks, 901-222, 12345), (Lena, Hand, 805-333, 12345), (Lena, Hand, 805-333, 12345)
+d.) The relation schema for each relation
+In the Accounts relation  : Accounts(acctNo, type, balance)
+In the Customers relation : Customers(firstName, lastName, idNo, account)
+e.) The database schema
+the set of schemas { Accounts(acctNo, type, balance), Customers(firstName, lastName, idNo, account) }
+f.) A suitable domain for each attribute
+In the Accounts relation  : Accounts(acctNo:integer, type:string, balance:integer)
+In the Customers relation : Customers(firstName:string, lastName:string, idNo:string, account:integer)
+
+I, Justin Anthony Timberlake, declare that I have completed this assignment completely and entirely on my own, without any consultation with others.  I understand that any breach of the UAB Academic Honor Code may result in severe penalties.
