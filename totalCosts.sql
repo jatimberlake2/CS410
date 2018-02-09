@@ -1,0 +1,4 @@
+CREATE OR REPLACE VIEW totalCosts AS
+SELECT t.transactionID, t.quantity, ROUND(p.currentprice, 2) AS itemCost, ROUND(t.quantity*p.currentprice, 2) AS subtotal, CASE WHEN t.shippingMethod = 'Expedited' THEN  ROUND(.2*t.quantity*p.currentprice, 2) WHEN t.shippingMethod = 'Normal' THEN  ROUND(.1*t.quantity*p.currentprice, 2) END as shippingCost, CASE WHEN t.shippingMethod = 'Expedited' THEN ROUND(1.2*t.quantity*p.currentprice, 2) WHEN t.shippingMethod = 'Normal' THEN  ROUND(1.1*t.quantity*p.currentprice, 2) END as totalCost, p.pid, p.name AS item
+FROM product p JOIN transaction t ON p.pid = t.pid
+ORDER BY transactionID, PID;
